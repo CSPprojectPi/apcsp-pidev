@@ -23,7 +23,8 @@ float* ptrtoD = &d;
 float* ptrtoE = &e;
 printf("The value of d is %f and its address is %d\n", d, &d);
 printf("The value of e is %f and its address is %d\n", e, &e);
-
+//address is always represented as an integer.
+  
 int temp = 0;
 temp = *ptrtoD;
 *ptrtoD = *ptrtoE;
