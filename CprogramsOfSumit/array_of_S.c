@@ -15,5 +15,5 @@ int main(){
     arr[i] = i * i;
   }
 
-  arrayAdd(arr, 11, 3);
+  arrayAdd(arr, 100, 3);
 }
