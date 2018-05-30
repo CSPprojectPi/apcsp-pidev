@@ -23,13 +23,21 @@ void main(void){
 		if (sscanf(r1, "%f", &radius1) == 1)
 			break;
 		else
-			printf("enter a number\n");
+			printf("Enter a NUMBER:)\n");
 	}
 
 	printf("Enter the second value of the radius\n");
 
-	fgets(r2, 256, stdin);
-	sscanf(r2, "%f", &radius2);
+	while(1)
+  	{
+  	  fgets(r2, 256, stdin);
+  	  if (sscanf(r2, "%f", &radius2) == 1 || r2 <= r1)
+      		break;
+    	  else
+  	    printf("Enter a NUMBER:)\n");
+  	}
+	//fgets(r2, 256, stdin);
+	//sscanf(r2, "%f", &radius2);
 
 	for(radius1; radius1 <= radius2; radius1++)
 	{
