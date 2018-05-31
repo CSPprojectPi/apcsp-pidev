@@ -23,7 +23,24 @@ void printStudent (struct Student* student) {
 
 int main () {
   char input[250];
+  int n;
+
+  printf ("how many students do you need to record?:");
+  fgets(input, 5, stdin);
+  while (1) {
+    if (sscanf(input , "%d", n); == 1); {
+      printf ("students:\n");
+        for (int i = 0; i < n; i++ ) {
+          printf ("-\n");
+        }
+      break;
+    }
+  printf ("please enter the amount of students you need to record...:");
+  }
+
+  for (int i = 0; i < n; i++ ) {
   struct Student student1;
+  }
 
   printf ("firstname?...\n");
   fgets(input, 256, stdin);
