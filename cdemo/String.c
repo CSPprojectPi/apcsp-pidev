@@ -6,7 +6,7 @@ void main() {
   char alphbet2[] = "abcdefghijklmnopqrstuvwxyz";
   char alphbet3[27];
   char alphbet4[27];
-  
+
 
   printf ("alphbet 1: %s\n", alphbet2);
   char c = 'a';
@@ -35,7 +35,6 @@ void main() {
 
   alphbet3[26] = '\0';
   printf("%s", alphbet3);
-  
   printf ("\n");
 
   strcat(alphbet4, alphbet1);
