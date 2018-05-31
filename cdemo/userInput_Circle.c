@@ -31,7 +31,7 @@ void main(void){
 	while(1)
   	{
   	  fgets(r2, 256, stdin);
-  	  if (sscanf(r2, "%f", &radius2) == 1 || r2 <= r1)
+  	  if (sscanf(r2, "%f", &radius2))
       		break;
     	  else
   	    printf("Enter a NUMBER:)\n");
