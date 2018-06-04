@@ -7,7 +7,7 @@ float multiplication(float a, float b){
 	return mulAns;
 }
 
-float division(float c, float b){
+float division(float c, float d){
 	float divAns = 0;
 	divAns = c/d;
 	return divAns;
