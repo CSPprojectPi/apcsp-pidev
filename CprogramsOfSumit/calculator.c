@@ -7,6 +7,12 @@ float multiplication(float a, float b){
 	return mulAns;
 }
 
+float division(float c, float b){
+	float divAns = 0;
+	divAns = c/d;
+	return divAns;
+}
+
 int main(){
 
 	float mulAns1 = 0;
