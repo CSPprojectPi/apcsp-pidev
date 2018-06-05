@@ -17,7 +17,8 @@ void introduction()
 	return mulAns;
 }
 */
-void multiplication() {
+void multiplication()
+{
 	float mulAns1 = 0;
 	char x[256];
 	char y[256];
@@ -47,7 +48,8 @@ void multiplication() {
 	printf("Enter the symbol of the math operation you want to perform: ");
 }
 
-float division() {
+float division() 
+{
 	
 	float divAns = 0;
 	char x[256];
@@ -78,7 +80,8 @@ float division() {
 	printf("Enter the symbol of the math operation you want to perform: ");
 }
 
-float subtraction(){
+float subtraction()
+{
 	float subtAns = 0;
 	char x[256];
 	char y[256];
@@ -108,6 +111,11 @@ float subtraction(){
 	subtAns = a - b;
 	printf("%f minus %f is equal to %f", a, b, subtAns);
 	printf("\nEnter the symbol of the math operation you want to perform: ");
+}
+
+float addition()
+{
+	Printf("\nEnter the first number you want to add: ")
 }
 
 int main() {
