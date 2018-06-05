@@ -4,9 +4,11 @@
 void introduction()
 {
 	printf("For Multiplication, type '*'\n");
-	printf("For Division, type '/'\n\n");
+	printf("For Division, type '/'\n");
+	printf("For subtraction, type '-'\n");
+	
 
-	printf("Enter the symbol of the math operation you want to perform: ");
+	printf("\nEnter the symbol of the math operation you want to perform: ");
 }
 
 /* float multiply(float a, float b) {
@@ -76,6 +78,38 @@ float division() {
 	printf("Enter the symbol of the math operation you want to perform: ");
 }
 
+float subtraction(){
+	float subtAns = 0;
+	char x[256];
+	char y[256];
+	float a = 0;
+	float b = 0;
+	
+	printf("\nEnter the first number: ");
+	fgets(x, 256, stdin);
+	while(1)
+	{
+		if (sscanf(x, "%f", &a) == 1)
+			break;
+		else
+			printf("It needs to be a number!\n");
+	}
+	
+	printf("\nEnter the second number: ");
+	fgets(y, 256, stdin);
+	while(1)
+	{
+		if(sscanf(y, "%f", &b) == 1)
+			break;
+		else
+			printf("It needs to be a number!\n");
+	}
+	
+	subtAns = a - b;
+	printf("%f minus %f is equal to %f", a, b, subtAns);
+	printf("\nEnter the symbol of the math operation you want to perform: ");
+}
+
 int main() {
 
 	introduction();
@@ -91,6 +125,9 @@ int main() {
 					break;
 			
 		case '/': division();
+					break;
+		
+		case '-': subtraction();
 					break;
 		}
     
