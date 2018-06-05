@@ -6,7 +6,7 @@ void introduction()
 	printf("For Multiplication, type '*'\n");
 	printf("For Division, type '/'\n");
 	printf("For subtraction, type '-'\n");
-	
+	printf("For Addition, type '+'\n");
 
 	printf("\nEnter the symbol of the math operation you want to perform: ");
 }
@@ -58,8 +58,9 @@ float division()
 	float d = 0;
 	
 	printf("\nEnter the dividend: ");
-	fgets(x, 256, stdin);
+	
 	while(1){
+		fgets(x, 256, stdin);
 		if(sscanf(x, "%f", &c) == 1)
 			break;
 		else
@@ -67,8 +68,9 @@ float division()
 	}
 	
 	printf("Now enter the divisor: ");
-	fgets(y, 256, stdin);
+	
 	while(1){
+		fgets(y, 256, stdin);
 		if(sscanf(y, "%f", &d) == 1)
 			break;
 		else
@@ -89,9 +91,10 @@ float subtraction()
 	float b = 0;
 	
 	printf("\nEnter the first number: ");
-	fgets(x, 256, stdin);
+	
 	while(1)
 	{
+		fgets(x, 256, stdin);
 		if (sscanf(x, "%f", &a) == 1)
 			break;
 		else
@@ -99,9 +102,10 @@ float subtraction()
 	}
 	
 	printf("\nEnter the second number: ");
-	fgets(y, 256, stdin);
+	
 	while(1)
 	{
+		fgets(y, 256, stdin);
 		if(sscanf(y, "%f", &b) == 1)
 			break;
 		else
@@ -115,8 +119,47 @@ float subtraction()
 
 float addition()
 {
-	Printf("\nEnter the first number you want to add: ")
+	float addAns = 0;
+	char x[256];
+	char y[256];
+	float a = 0;
+	float b = 0;
+	
+	printf("\nEnter the first number you want to add: ");
+	
+	while(1)
+	{
+		fgets(x, 256, stdin);
+		if(sscanf(x, "%f", &a) == 1)
+			break;
+		else
+			printf("It needs to be a number!\n");	
+	}
+	
+	printf("\n Enter the second number you want to add: ");
+	
+	while(1)
+	{
+		fgets(y, 256, stdin);
+		if(sscanf(y, "%f", &b) == 1)
+			break;
+		else
+			printf("It needs to be a number!\n");
+	}
+	addAns = a + b;
+	printf("The sum of %f and %f is %f", a, b, addAns);
 }
+
+float factorial()
+{
+	
+}
+
+float modulus()
+{
+	
+}
+
 
 int main() {
 
@@ -137,6 +180,18 @@ int main() {
 		
 		case '-': subtraction();
 					break;
+		case '+': addition();
+					break;
+		case '!': factorial();
+					break;
+		case '%': modulus();
+					break;
+		case 'c': system("cls");
+						introduction();
+						break;
+		case 'q': exit(0);
+						break;
+		default: printf("Enter one of the values from above");
 		}
     
 	}
