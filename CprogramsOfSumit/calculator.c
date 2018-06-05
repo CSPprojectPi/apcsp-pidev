@@ -1,14 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include <math.h>
+//math.h is only used for modulus operation, nothing else.
+
 void introduction()
 {
-	printf("Welcome to the calculator I made using C language");
 	printf("For Multiplication, type '*'\n");
 	printf("For Division, type '/'\n");
 	printf("For Subtraction, type '-'\n");
 	printf("For Addition, type '+'\n");
-	printf("For Modulus, type '%'\n");
+	printf("For Modulus, type 'm'\n");
 	printf("For Factorial, type '!'\n");
 	printf("For clearing the screen, type 'c'\n");
 	printf("For exiting, type 'e'\n");
@@ -153,16 +155,66 @@ float addition()
 	}
 	addAns = a + b;
 	printf("The sum of %f and %f is %f", a, b, addAns);
+	printf("\nEnter the symbol of the math operation you want to perform: ");
 }
 
 float factorial()
 {
+	char x[256];
+	int a = 0;
+	int factorialAns = 0;
+	
+	printf("\nEnter the integer number you want to get the factorial of: ");
+	while(1)
+	{
+		fgets(x, 256, stdin);
+		if(sscanf(x, "%d", &a) == 1)
+			break;
+		else
+			printf("It needs to be a number!\n");
+	 } 
+	
+	factorialAns = a;
+	
+	for(int i = 1; i < a; i++)
+	{
+		factorialAns = factorialAns * i;
+	}
+	printf("The factorial of %d is %d", a, factorialAns);
+	printf("\nEnter the symbol of the math operation you want to perform: ");
 	
 }
 
 float modulus()
 {
+	int modAns = 0;
+	char x[256];
+	char y[256];
+	int a = 0;
+	int b = 0;
 	
+	printf("\nEnter the dividend as an integer: ");
+	while(1)
+	{
+		fgets(x, 256, stdin);
+		if(sscanf(x, "%d", &a) == 1)
+			break;
+		else
+			printf("\nIt needs to be a number!\n");
+	}
+	printf("\nEnter the divisor as an integer: ");
+	while(1)
+	{
+		fgets(y, 256, stdin);
+		if(sscanf(y, "%d", &b) == 1)
+			break;
+		else
+			printf("It needs to be a number!\n");
+	}
+	
+	modAns = a%b;
+	printf("The modulus of %d over %d is %d\n", a, b, modAns);
+	printf("Enter the symbol of the math operation you want to perform: ");
 }
 
 
@@ -189,7 +241,7 @@ int main() {
 					break;
 		case '!': factorial();
 					break;
-		case '%': modulus();
+		case 'm': modulus();
 					break;
 		case 'c': system("cls");
 						introduction();
