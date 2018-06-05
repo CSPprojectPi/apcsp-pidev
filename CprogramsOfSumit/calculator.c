@@ -226,7 +226,7 @@ int main() {
 
 	while (l) {
 		
-		int userInput = getche();
+		int userInput = getchar();
 		
 		switch (userInput) {
 		case '*': multiplication();
