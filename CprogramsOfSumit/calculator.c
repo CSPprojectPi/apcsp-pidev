@@ -3,10 +3,15 @@
 
 void introduction()
 {
+	printf("Welcome to the calculator I made using C language");
 	printf("For Multiplication, type '*'\n");
 	printf("For Division, type '/'\n");
-	printf("For subtraction, type '-'\n");
+	printf("For Subtraction, type '-'\n");
 	printf("For Addition, type '+'\n");
+	printf("For Modulus, type '%'\n");
+	printf("For Factorial, type '!'\n");
+	printf("For clearing the screen, type 'c'\n");
+	printf("For exiting, type 'e'\n");
 
 	printf("\nEnter the symbol of the math operation you want to perform: ");
 }
@@ -189,7 +194,7 @@ int main() {
 		case 'c': system("cls");
 						introduction();
 						break;
-		case 'q': exit(0);
+		case 'e': exit(0);
 						break;
 		default: printf("Enter one of the values from above");
 		}
