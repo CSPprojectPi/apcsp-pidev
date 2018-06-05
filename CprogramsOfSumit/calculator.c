@@ -22,26 +22,27 @@ void multiplication() {
 	float a;
 	float b;
 
-	printf("\nEnter the first number you want to multiply:\n");
+	printf("\nEnter the first number you want to multiply: ");
 	while (1) {
 		fgets(x, 256, stdin);
 		if (sscanf(x, "%f", &a) == 1)
 			break;
 		else
-			printf("It needs to be a number!\n");
+			printf("\nIt needs to be a number!\n");
 	}
-	printf("Enter the second number: \n");
+	printf("Enter the second number: ");
 	while (1) {
 		fgets(y, 256, stdin);
 		if (sscanf(y, "%f", &b) == 1)
 			break;
 		else
-			printf("It needs to be a number!\n");
+			printf("\nIt needs to be a number!\n");
 	}
 
 	mulAns1 = a * b;
 		
 	printf("The product of %f and %f is %f.\n", a, b, mulAns1);
+	printf("Enter the symbol of the math operation you want to perform: ");
 }
 
 float division() {
@@ -52,18 +53,27 @@ float division() {
 	float c = 0;
 	float d = 0;
 	
-	printf("\nEnter the dividend: \n");
+	printf("\nEnter the dividend: ");
 	fgets(x, 256, stdin);
 	while(1){
-	if(sscanf(x, "%f", &c) == 1)
-		break;
-	else
-		printf("It needs to be a number!\n");
+		if(sscanf(x, "%f", &c) == 1)
+			break;
+		else
+			printf("It needs to be a number!\n");
 	}
-	printf("/nEnter");
 	
-	
-	
+	printf("Now enter the divisor: ");
+	fgets(y, 256, stdin);
+	while(1){
+		if(sscanf(y, "%f", &d) == 1)
+			break;
+		else
+			printf("It needs to be a number!\n");
+	}
+
+	divAns = c/d;	
+	printf("%f divided by %f is %f/n", c, d, divAns);
+	printf("Enter the symbol of the math operation you want to perform: ");
 }
 
 int main() {
@@ -74,7 +84,7 @@ int main() {
 
 	while (l) {
 		
-		char userInput = getche();
+		int userInput = getche();
 		
 		switch (userInput) {
 		case '*': multiplication();
