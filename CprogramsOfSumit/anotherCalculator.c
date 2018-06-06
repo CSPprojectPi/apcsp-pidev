@@ -234,7 +234,7 @@ int main(int argc, char* argv[]) {
 	int user_input2;
 	int user_input3;
 	
-	if (argc == 3)
+	if (argc == 4)
 	{
 
 		sscanf(argv[1], "%c", &user_input1);
