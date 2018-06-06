@@ -185,7 +185,7 @@ float factorial()
 	
 }
 
-int factorial2()
+/*int factorial2()
 {
 	int factorialAns = a;
 	
@@ -194,7 +194,7 @@ int factorial2()
 		factorialAns = factorialAns * i;
 	}
 }
-
+*/
 float modulus()
 {
 	int modAns = 0;
@@ -255,9 +255,9 @@ int main(int argc, char* argv[]) {
 					break;
 			case '+': user_input2 + user_input3;
 					break;
-			case '!': factorial2();
+			//case '!': factorial2();
 					break;
-			case 'm': user_input2%user_input3
+			case 'm': user_input2%user_input3;
 					break;
 			}
 		}
