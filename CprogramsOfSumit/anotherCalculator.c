@@ -231,22 +231,22 @@ float modulus()
 int main(int argc, char* argv[]) {
 	
 	char user_input1;	
-	char user_input2;
-	char user_input3;
+	int user_input2;
+	int user_input3;
 	
 	if (argc == 3)
 	{
 
 		sscanf(argv[1], "%c", &user_input1);
-		sscanf(argv[2], "%c", &user_input2);
-		sscanf(argv[3], "%c", &user_input3);
+		sscanf(argv[2], "%d", &user_input2);
+		sscanf(argv[3], "%d", &user_input3);
 		
 		while(1) {
 			char user_input1 = getchar();
 			
 			switch (user_input1) {
-			case '*': user_input2 * user_input3;
-						break;
+			case '*': printf("%d",user_input2 * user_input3);
+					break;
 				
 			case '/': user_input2/user_input3;
 					break;
