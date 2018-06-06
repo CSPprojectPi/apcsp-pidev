@@ -236,12 +236,11 @@ int main(int argc, char* argv[]) {
 	
 	if (argc == 4)
 	{
-
+		printf("e");
 		sscanf(argv[1], "%c", &user_input1);
 		sscanf(argv[2], "%d", &user_input2);
 		sscanf(argv[3], "%d", &user_input3);
 		
-		while(1) {
 			
 			switch (user_input1) {
 			case '*': printf("%d", user_input2 * user_input3);
@@ -258,8 +257,8 @@ int main(int argc, char* argv[]) {
 					break;
 			case 'm': user_input2%user_input3;
 					break;
-			}
 		}
+		
 	
 	}
 	else
