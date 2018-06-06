@@ -228,7 +228,7 @@ float modulus()
 }
 
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
 	
 	char user_input1;	
 	int user_input2;
