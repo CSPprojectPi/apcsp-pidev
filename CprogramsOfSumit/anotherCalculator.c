@@ -242,10 +242,9 @@ int main(int argc, char* argv[]) {
 		sscanf(argv[3], "%d", &user_input3);
 		
 		while(1) {
-			char user_input1 = getchar();
 			
 			switch (user_input1) {
-			case '*': printf("%d",user_input2 * user_input3);
+			case '*': printf("%d", user_input2 * user_input3);
 					break;
 				
 			case '/': user_input2/user_input3;
