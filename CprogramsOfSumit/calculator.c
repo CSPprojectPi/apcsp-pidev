@@ -243,17 +243,17 @@ int main(int argc, char *argv[]) {
 		
 			
 			switch (user_input1) {
-			case 'x': printf("%d", user_input2 * user_input3);
+			case 'x': printf("\n%d", user_input2 * user_input3);
 					break;
-			case '/': printf("%d", user_input2/user_input3);
+			case '/': printf("\n%d", user_input2/user_input3);
 					break;
-			case '-': printf("%d", user_input2 - user_input3);
+			case '-': printf("\n%d", user_input2 - user_input3);
 					break;
-			case '+': printf("%d", user_input2 + user_input3);
+			case '+': printf("\n%d", user_input2 + user_input3);
 					break;
 			//case '!': factorial2();
 					break;
-			case 'm': printf("%d", user_input2%user_input3);
+			case 'm': printf("\n%d", user_input2%user_input3);
 					break;
 		}
 		
