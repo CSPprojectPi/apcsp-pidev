@@ -229,16 +229,14 @@ float modulus()
 
 
 int main(int argc, char *argv[]) {
-	
-	
+		
+	char user_input1;	
+	int user_input2;
+	int user_input3;
 	
 	if (argc == 4)
 	{
-		char user_input1;	
-		int user_input2;
-		int user_input3;
-		
-		printf("\nIt has entered the if statement");
+		printf("\nIt has entered the if statement\n");
 		sscanf(argv[1], "%c", &user_input1);
 		sscanf(argv[2], "%d", &user_input2);
 		sscanf(argv[3], "%d", &user_input3);
@@ -249,7 +247,6 @@ int main(int argc, char *argv[]) {
 					break;
 			case '/': printf("%d", user_input2/user_input3);
 					break;
-		
 			case '-': printf("%d", user_input2 - user_input3);
 					break;
 			case '+': printf("%d", user_input2 + user_input3);
