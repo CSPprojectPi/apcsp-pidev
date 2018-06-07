@@ -185,6 +185,16 @@ float factorial()
 	
 }
 
+/*int factorial2()
+{
+	int factorialAns = a;
+	
+	for(int i = 1; i < a; i++)
+	{
+		factorialAns = factorialAns * i;
+	}
+}
+*/
 float modulus()
 {
 	int modAns = 0;
@@ -218,38 +228,72 @@ float modulus()
 }
 
 
-int main() {
-
-	introduction();
-
-	int l = 1;
-
-	while (l) {
+int main(int argc, char *argv[]) {
+	
+	char user_input1;	
+	int user_input2;
+	int user_input3;
+	
+	if (argc == 4)
+	{
+		printf("e");
+		sscanf(argv[1], "%c", &user_input1);
+		sscanf(argv[2], "%d", &user_input2);
+		sscanf(argv[3], "%d", &user_input3);
 		
-		int userInput = getchar();
-		
-		switch (userInput) {
-		case '*': multiplication();
-					break;
 			
-		case '/': division();
+			switch (user_input1) {
+			case '*': printf("%d", user_input2 * user_input3);
+					break;
+				
+			case '/': user_input2/user_input3;
 					break;
 		
-		case '-': subtraction();
+			case '-': user_input2 - user_input3;
 					break;
-		case '+': addition();
+			case '+': user_input2 + user_input3;
 					break;
-		case '!': factorial();
+			//case '!': factorial2();
 					break;
-		case 'm': modulus();
+			case 'm': user_input2%user_input3;
 					break;
-		case 'c': system("cls");
+		}
+		
+	
+	}
+	else
+	{
+		introduction();
+
+		int l = 1;
+
+		while (l) {
+		
+			char Input = getchar();
+		
+			switch (Input) {
+			case '*': multiplication();
+						break;
+				
+			case '/': division();
+					break;
+		
+			case '-': subtraction();
+					break;
+			case '+': addition();
+					break;
+			case '!': factorial();
+					break;
+			case 'm': modulus();
+					break;
+			case 'c': system("cls");
 						introduction();
 						break;
-		case 'e': exit(0);
+			case 'e': exit(0);
 						break;
-		default: printf("Enter one of the values from above");
-		}
+			default: printf("Enter one of the values from above");
+			}
     
 	}
 }
+	}
