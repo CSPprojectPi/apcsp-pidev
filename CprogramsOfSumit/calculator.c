@@ -238,7 +238,7 @@ int main(int argc, char *argv[]) {
 		int user_input2;
 		int user_input3;
 		
-		printf("e");
+		printf("\nIt has entered the if statement");
 		sscanf(argv[1], "%c", &user_input1);
 		sscanf(argv[2], "%d", &user_input2);
 		sscanf(argv[3], "%d", &user_input3);
