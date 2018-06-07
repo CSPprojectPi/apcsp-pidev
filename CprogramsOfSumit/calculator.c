@@ -64,7 +64,7 @@ float division()
 	float c = 0;
 	float d = 0;
 	
-	printf("\nEnter the dividend: ");
+	printf("/nEnter the dividend: \n");
 	
 	while(1){
 		fgets(x, 256, stdin);
@@ -81,7 +81,7 @@ float division()
 		if(sscanf(y, "%f", &d) == 1)
 			break;
 		else
-			printf("It needs to be a number!\n");
+			printf("It needs to be a number: ");
 	}
 
 	divAns = c/d;	
@@ -97,7 +97,7 @@ float subtraction()
 	float a = 0;
 	float b = 0;
 	
-	printf("\nEnter the first number: ");
+	printf("\nEnter the first number: \n");
 	
 	while(1)
 	{
@@ -105,10 +105,10 @@ float subtraction()
 		if (sscanf(x, "%f", &a) == 1)
 			break;
 		else
-			printf("It needs to be a number!\n");
+			printf("It needs to be a number: ");
 	}
 	
-	printf("\nEnter the second number: ");
+	printf("Enter the second number: ");
 	
 	while(1)
 	{
@@ -116,12 +116,12 @@ float subtraction()
 		if(sscanf(y, "%f", &b) == 1)
 			break;
 		else
-			printf("It needs to be a number!\n");
+			printf("It needs to be a number: ");
 	}
 	
 	subtAns = a - b;
-	printf("%f minus %f is equal to %f", a, b, subtAns);
-	printf("\nEnter the symbol of the math operation you want to perform: ");
+	printf("%f minus %f is equal to %f\n", a, b, subtAns);
+	printf("Enter the symbol of the math operation you want to perform: ");
 }
 
 float addition()
@@ -132,7 +132,7 @@ float addition()
 	float a = 0;
 	float b = 0;
 	
-	printf("\nEnter the first number you want to add: ");
+	printf("\nEnter the first number you want to add: \n");
 	
 	while(1)
 	{
@@ -140,10 +140,10 @@ float addition()
 		if(sscanf(x, "%f", &a) == 1)
 			break;
 		else
-			printf("It needs to be a number!\n");	
+			printf("It needs to be a number: ");	
 	}
 	
-	printf("\n Enter the second number you want to add: ");
+	printf("Enter the second number you want to add: ");
 	
 	while(1)
 	{
@@ -151,11 +151,11 @@ float addition()
 		if(sscanf(y, "%f", &b) == 1)
 			break;
 		else
-			printf("It needs to be a number!\n");
+			printf("It needs to be a number: ");
 	}
 	addAns = a + b;
-	printf("The sum of %f and %f is %f", a, b, addAns);
-	printf("\nEnter the symbol of the math operation you want to perform: ");
+	printf("The sum of %f and %f is %f\n", a, b, addAns);
+	printf("Enter the symbol of the math operation you want to perform: ");
 }
 
 float factorial()
@@ -164,14 +164,14 @@ float factorial()
 	int a = 0;
 	int factorialAns = 0;
 	
-	printf("\nEnter the integer number you want to get the factorial of: ");
+	printf("\nEnter the integer number you want to get the factorial of: \n");
 	while(1)
 	{
 		fgets(x, 256, stdin);
 		if(sscanf(x, "%d", &a) == 1)
 			break;
 		else
-			printf("It needs to be a number!\n");
+			printf("It needs to be a number: ");
 	 } 
 	
 	factorialAns = a;
@@ -180,8 +180,8 @@ float factorial()
 	{
 		factorialAns = factorialAns * i;
 	}
-	printf("The factorial of %d is %d", a, factorialAns);
-	printf("\nEnter the symbol of the math operation you want to perform: ");
+	printf("The factorial of %d is %d\n", a, factorialAns);
+	printf("Enter the symbol of the math operation you want to perform: ");
 	
 }
 
@@ -203,23 +203,23 @@ float modulus()
 	int a = 0;
 	int b = 0;
 	
-	printf("\nEnter the dividend as an integer: ");
+	printf("\nEnter the dividend as an integer: \n");
 	while(1)
 	{
 		fgets(x, 256, stdin);
 		if(sscanf(x, "%d", &a) == 1)
 			break;
 		else
-			printf("\nIt needs to be a number!\n");
+			printf("It needs to be a number!");
 	}
-	printf("\nEnter the divisor as an integer: ");
+	printf("Enter the divisor as an integer: ");
 	while(1)
 	{
 		fgets(y, 256, stdin);
 		if(sscanf(y, "%d", &b) == 1)
 			break;
 		else
-			printf("It needs to be a number!\n");
+			printf("It needs to be a number!");
 	}
 	
 	modAns = a%b;
