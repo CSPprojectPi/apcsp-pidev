@@ -32,13 +32,13 @@ void multiplication()
 	float a;
 	float b;
 
-	printf("\nEnter the first number you want to multiply: ");
+	printf("\nEnter the first number you want to multiply: \n");
 	while (1) {
 		fgets(x, 256, stdin);
 		if (sscanf(x, "%f", &a) == 1)
 			break;
 		else
-			printf("\nIt needs to be a number!\n");
+			printf("It needs to be a number: ");
 	}
 	printf("Enter the second number: ");
 	while (1) {
@@ -46,7 +46,7 @@ void multiplication()
 		if (sscanf(y, "%f", &b) == 1)
 			break;
 		else
-			printf("\nIt needs to be a number!\n");
+			printf("It needs to be a number: ");
 	}
 
 	mulAns1 = a * b;
@@ -71,7 +71,7 @@ float division()
 		if(sscanf(x, "%f", &c) == 1)
 			break;
 		else
-			printf("It needs to be a number!\n");
+			printf("It needs to be a number: ");
 	}
 	
 	printf("Now enter the divisor: ");
