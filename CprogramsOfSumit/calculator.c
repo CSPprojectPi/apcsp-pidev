@@ -236,24 +236,23 @@ int main(int argc, char *argv[]) {
 	
 	if (argc == 4)
 	{
-		printf("\nIt has entered the if statement\n");
 		sscanf(argv[1], "%c", &user_input1);
 		sscanf(argv[2], "%d", &user_input2);
 		sscanf(argv[3], "%d", &user_input3);
 		
 			
 			switch (user_input1) {
-			case 'x': printf("\n%d\n", user_input2 * user_input3);
+			case 'x': printf("%d\n", user_input2 * user_input3);
 					break;
-			case '/': printf("\n%d\n", user_input2/user_input3);
+			case '/': printf("%d\n", user_input2/user_input3);
 					break;
-			case '-': printf("\n%d\n", user_input2 - user_input3);
+			case '-': printf("%d\n", user_input2 - user_input3);
 					break;
-			case '+': printf("\n%d\n", user_input2 + user_input3);
+			case '+': printf("%d\n", user_input2 + user_input3);
 					break;
 			//case '!': factorial2();
 					break;
-			case 'm': printf("\n%d\n", user_input2%user_input3);
+			case 'm': printf("%d\n", user_input2%user_input3);
 					break;
 		}
 		
