@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Form Input 2</title>
+    <title>Calculator</title>
   </head>
 
 
   <body>
 
-    <h1>Form Input 2</h1>
-    <p>Demo of how to take form input and pass it to a C program - all in a single page</p>
+    <h1>Calculator</h1>
+    <p>Three arguments need to be entered. First is the operation, which can be either +, -, x, /, or m. m is for modulus. The next two arguments need to be numbers. There needs to be a space between each argument.</p>
 
     <?php
        // define variables and set to empty values
