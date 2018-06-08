@@ -85,7 +85,7 @@ float division()
 	}
 
 	divAns = c/d;	
-	printf("%f divided by %f is %f/n", c, d, divAns);
+	printf("%f divided by %f is %f\n", c, d, divAns);
 	printf("Enter the symbol of the math operation you want to perform: ");
 }
 
