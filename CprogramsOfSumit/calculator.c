@@ -64,7 +64,7 @@ float division()
 	float c = 0;
 	float d = 0;
 	
-	printf("/nEnter the dividend: \n");
+	printf("\nEnter the dividend: \n");
 	
 	while(1){
 		fgets(x, 256, stdin);
