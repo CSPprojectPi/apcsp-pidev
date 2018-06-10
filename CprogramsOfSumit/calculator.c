@@ -161,17 +161,19 @@ float addition()
 float factorial()
 {
 	char x[256];
-	int a = 0;
-	int factorialAns = 0;
+	float a = 0;
+	float factorialAns = 0;
+	int l = 1;
 	
 	printf("\nEnter the integer number you want to get the factorial of: \n");
-	while(1)
+	while(l)
 	{
 		fgets(x, 256, stdin);
-		if(sscanf(x, "%d", &a) == 1)
+		if((sscanf(x, "%f", &a) == 1) && ((a >= 1)))
 			break;
-		else
-			printf("It needs to be a number: ");
+		else 
+			printf("It needs to be a positive number: ");
+			
 	 } 
 	
 	factorialAns = a;
@@ -180,7 +182,7 @@ float factorial()
 	{
 		factorialAns = factorialAns * i;
 	}
-	printf("The factorial of %d is %d\n", a, factorialAns);
+	printf("The factorial of %f is %f\n", a, factorialAns);
 	printf("Enter the symbol of the math operation you want to perform: ");
 	
 }
@@ -210,7 +212,7 @@ float modulus()
 		if(sscanf(x, "%d", &a) == 1)
 			break;
 		else
-			printf("It needs to be a number!");
+			printf("It needs to be a number: ");
 	}
 	printf("Enter the divisor as an integer: ");
 	while(1)
@@ -219,7 +221,7 @@ float modulus()
 		if(sscanf(y, "%d", &b) == 1)
 			break;
 		else
-			printf("It needs to be a number!");
+			printf("It needs to be a number: ");
 	}
 	
 	modAns = a%b;
@@ -250,8 +252,6 @@ int main(int argc, char *argv[]) {
 					return 1;
 			case '+': printf("%d\n", user_input2 + user_input3);
 					return 1;
-			//case '!': factorial2();
-					break;
 			case 'm': printf("%d\n", user_input2%user_input3);
 					return 1;
 		}
@@ -288,7 +288,7 @@ int main(int argc, char *argv[]) {
 						break;
 			case 'e': exit(0);
 						break;
-			default: printf("Enter one of the values from above");
+			default: printf("\nEnter one of the values from above: ");
 			}
     
 	}
