@@ -246,8 +246,11 @@ int main(int argc, char *argv[]) {
 			switch (user_input1) {
 			case 'x': printf("%d\n", user_input2 * user_input3);
 					return 1;
-			case '/': printf("%d\n", user_input2/user_input3);
-					return 1;
+			case '/': if(user_input3 == 0)
+				   printf("undefined\n");
+				else
+				  printf("%d\n", user_input2/user_input3);
+				return 1;
 			case '-': printf("%d\n", user_input2 - user_input3);
 					return 1;
 			case '+': printf("%d\n", user_input2 + user_input3);
