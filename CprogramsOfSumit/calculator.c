@@ -6,7 +6,7 @@
 
 void introduction()
 {
-	printf("For Multiplication, type '*'\n");
+	printf("For Multiplication, type 'x'\n");
 	printf("For Division, type '/'\n");
 	printf("For Subtraction, type '-'\n");
 	printf("For Addition, type '+'\n");
@@ -275,7 +275,7 @@ int main(int argc, char *argv[]) {
 			char Input = getchar();
 		
 			switch (Input) {
-			case '*': multiplication();
+			case 'x': multiplication();
 						break;
 				
 			case '/': division();
