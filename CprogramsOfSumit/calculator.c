@@ -78,10 +78,10 @@ float division()
 	
 	while(1){
 		fgets(y, 256, stdin);
-		if(sscanf(y, "%f", &d) == 1)
+		if((sscanf(y, "%f", &d) == 1) && d != 0)
 			break;
 		else
-			printf("It needs to be a number: ");
+			printf("It needs to be a non-zero number: ");
 	}
 
 	divAns = c/d;	
@@ -218,10 +218,10 @@ float modulus()
 	while(1)
 	{
 		fgets(y, 256, stdin);
-		if(sscanf(y, "%d", &b) == 1)
+		if((sscanf(y, "%d", &b) == 1) && b != 0)
 			break;
 		else
-			printf("It needs to be a number: ");
+			printf("It needs to be a non-zero number: ");
 	}
 	
 	modAns = a%b;
