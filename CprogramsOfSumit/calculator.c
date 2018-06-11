@@ -255,7 +255,10 @@ int main(int argc, char *argv[]) {
 					return 1;
 			case '+': printf("%d\n", user_input2 + user_input3);
 					return 1;
-			case 'm': printf("%d\n", user_input2%user_input3);
+			case 'm':  if(user_input3 == 0)
+				  printf("divisor can not be 0\n");
+				else
+				  printf("%d\n", user_input2%user_input3);
 					return 1;
 		}
 		
